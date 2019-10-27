@@ -81,6 +81,79 @@ RUN chown odoo /etc/odoo/odoo.conf
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN mkdir -p /mnt/extra-addons \
         && chown -R odoo /mnt/extra-addons
+        && curl -o account-analytic.zip  -SL https://github.com/OCA/account-analytic/archive/12.0.zip \
+        && unzip /mnt/extra-addons/account-analytic.zip
+        && curl -o account-closing.zip  -SL https://github.com/OCA/account-closing/archive/12.0.zip \
+&& unzip /mnt/extra-addons/account-closing.zip
+&& curl -o account-financial-reporting.zip  -SL https://github.com/OCA/account-financial-reporting/archive/12.0.zip \
+&& unzip /mnt/extra-addons/account-financial-reporting.zip
+&& curl -o account-financial-tools.zip  -SL https://github.com/OCA/account-financial-tools/archive/12.0.zip \
+&& unzip /mnt/extra-addons/account-financial-tools.zip
+&& curl -o account-invoicing.zip  -SL https://github.com/OCA/account-invoicing/archive/12.0.zip \
+&& unzip /mnt/extra-addons/account-invoicing.zip
+&& curl -o account-payment.zip  -SL https://github.com/OCA/account-payment/archive/12.0.zip \
+&& unzip /mnt/extra-addons/account-payment.zip
+&& curl -o bank-payment.zip  -SL https://github.com/OCA/bank-payment/archive/12.0.zip \
+&& unzip /mnt/extra-addons/bank-payment.zip
+&& curl -o bank-statement-import.zip  -SL https://github.com/OCA/bank-statement-import/archive/12.0.zip \
+&& unzip /mnt/extra-addons/bank-statement-import.zip
+&& curl -o commission.zip  -SL https://github.com/OCA/commission/archive/12.0.zip \
+&& unzip /mnt/extra-addons/commission.zip
+&& curl -o community-data-files.zip  -SL https://github.com/OCA/community-data-files/archive/12.0.zip \
+&& unzip /mnt/extra-addons/community-data-files.zip
+&& curl -o contract.zip  -SL https://github.com/OCA/contract/archive/12.0.zip \
+&& unzip /mnt/extra-addons/contract.zip
+&& curl -o crm.zip  -SL https://github.com/OCA/crm/archive/12.0.zip \
+&& unzip /mnt/extra-addons/crm.zip
+&& curl -o event.zip  -SL https://github.com/OCA/event/archive/12.0.zip \
+&& unzip /mnt/extra-addons/event.zip
+&& curl -o hr.zip  -SL https://github.com/OCA/hr/archive/12.0.zip \
+&& unzip /mnt/extra-addons/hr.zip
+&& curl -o timesheet.zip  -SL https://github.com/OCA/timesheet/archive/12.0.zip \
+&& unzip /mnt/extra-addons/timesheet.zip
+&& curl -o knowledge.zip  -SL https://github.com/OCA/knowledge/archive/12.0.zip \
+&& unzip /mnt/extra-addons/knowledge.zip
+&& curl -o l10n-spain.zip  -SL https://github.com/OCA/l10n-spain/archive/12.0.zip \
+&& unzip /mnt/extra-addons/l10n-spain.zip
+&& curl -o manufacture.zip  -SL https://github.com/OCA/manufacture/archive/12.0.zip \
+&& unzip /mnt/extra-addons/manufacture.zip
+&& curl -o mis-builder.zip  -SL https://github.com/OCA/mis-builder/archive/12.0.zip \
+&& unzip /mnt/extra-addons/mis-builder.zip
+&& curl -o partner-contact.zip  -SL https://github.com/OCA/partner-contact/archive/12.0.zip \
+&& unzip /mnt/extra-addons/partner-contact.zip
+&& curl -o pos.zip  -SL https://github.com/OCA/pos/archive/12.0.zip \
+&& unzip /mnt/extra-addons/pos.zip
+&& curl -o product-attribute.zip  -SL https://github.com/OCA/product-attribute/archive/12.0.zip \
+&& unzip /mnt/extra-addons/product-attribute.zip
+&& curl -o product-variant.zip  -SL https://github.com/OCA/product-variant/archive/12.0.zip \
+&& unzip /mnt/extra-addons/product-variant.zip
+&& curl -o project.zip  -SL https://github.com/OCA/project/archive/12.0.zip \
+&& unzip /mnt/extra-addons/project.zip
+&& curl -o purchase-workflow.zip  -SL https://github.com/OCA/purchase-workflow/archive/12.0.zip \
+&& unzip /mnt/extra-addons/purchase-workflow.zip
+&& curl -o queue.zip  -SL https://github.com/OCA/queue/archive/12.0.zip \
+&& unzip /mnt/extra-addons/queue.zip
+&& curl -o reporting-engine.zip  -SL https://github.com/OCA/reporting-engine/archive/12.0.zip \
+&& unzip /mnt/extra-addons/reporting-engine.zip
+&& curl -o sale-workflow.zip  -SL https://github.com/OCA/sale-workflow/archive/12.0.zip \
+&& unzip /mnt/extra-addons/sale-workflow.zip
+&& curl -o server-brand.zip  -SL https://github.com/OCA/server-brand/archive/12.0.zip \
+&& unzip /mnt/extra-addons/server-brand.zip
+&& curl -o server-tools.zip  -SL https://github.com/OCA/server-tools/archive/12.0.zip \
+&& unzip /mnt/extra-addons/server-tools.zip
+&& curl -o server-ux.zip  -SL https://github.com/OCA/server-ux/archive/12.0.zip \
+&& unzip /mnt/extra-addons/server-ux.zip
+&& curl -o social  -SL https://github.com/OCA/social/archive/12.0.zip \
+&& unzip /mnt/extra-addons/social
+&& curl -o stock-logistics-warehouse.zip  -SL https://github.com/OCA/stock-logistics-warehouse/archive/12.0.zip \
+&& unzip /mnt/extra-addons/stock-logistics-warehouse.zip
+&& curl -o stock-logistics-workflow.zip  -SL https://github.com/OCA/stock-logistics-workflow/archive/12.0.zip \
+&& unzip /mnt/extra-addons/stock-logistics-workflow.zip
+&& curl -o web.zip  -SL https://github.com/OCA/web/archive/12.0.zip \
+&& unzip /mnt/extra-addons/web.zip
+&& curl -o website.zip  -SL https://github.com/OCA/website/archive/12.0.zip \
+&& unzip /mnt/extra-addons/website.zip
+
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 # Expose Odoo services
